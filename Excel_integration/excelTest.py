@@ -29,7 +29,7 @@ omg.plot(
     edge_width=2,
     edge_color="#7142cf")
 
-plt.show()
+plt.show() # Pokazuje na ekranie żeby debug można było robić
 
-# WORK IN PROGRESS
-#excel.push_to_excel(G,"Excel_integration\\testfakeecelresults.xlsx")
+
+excel.push_to_excel(G,"Excel_integration\\testfakeecelresults.xlsx")

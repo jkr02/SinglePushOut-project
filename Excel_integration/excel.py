@@ -38,7 +38,7 @@ def pull_from_excel(path : str, sheet: str = "Sheet1", label:str = "Etykieta") -
 # label to string jak nazwaliście etykiety. Domyślnie "Etykieta"
 def push_to_excel(G: omg.Graph, path:str = "tmp.xlsx", label:str = "Etykieta")->None:
    verticeNames = G.vs[label]
-   matrix = get_formatted_adjacency(G)
+   matrix = get_formatted_adjacency(G,label)
    
    df = panda.DataFrame(data= matrix, columns=verticeNames)
    df.to_excel(excel_writer = path, index=False)
@@ -55,17 +55,13 @@ def applyEdgeLabels(G: omg.Graph, matrix: list[list[str]],labelstr:str):
         source = G.es[edge_index].source
         target = G.es[edge_index].target
         label = matrix[source][target]
-        print(label)
         labels[edge_index] = label
     G.es[labelstr] = labels
 
-def get_formatted_adjacency(G: omg.Graph): 
+def get_formatted_adjacency(G: omg.Graph,labelstr:str): 
     matrix = [[ '' for i in range(G.vcount())] for _ in range(G.vcount())]
     for e in G.es:
-        sourceLabel = G.vs[e.source]
-        targetLabel = G.vs[e.target]
-        
-        
-    return 'x'
+        matrix[e.source][e.target] = e[labelstr]
+    return matrix
     
 
