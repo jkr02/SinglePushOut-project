@@ -23,10 +23,13 @@ omg.plot(
     vertex_frame_width=4.0,
     vertex_frame_color="white",
     vertex_label=G.vs["Etykieta"],
+    edge_label=G.es["Etykieta"],
     vertex_label_size=7.0,
+    edge_label_size=7.0,
     edge_width=2,
     edge_color="#7142cf")
 
 plt.show()
 
-excel.push_to_excel(G,"Excel_integration\\testfakeecelresults.xlsx")
+# WORK IN PROGRESS
+#excel.push_to_excel(G,"Excel_integration\\testfakeecelresults.xlsx")
