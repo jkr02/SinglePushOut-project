@@ -12,6 +12,7 @@ Np. w A1 zapisujemy etykiete wierzchołka 1, w B1 etykiete wierzcholka 2 etc.
 
 Wiersze 2+ służą do zapisywania relacji miedzy wierzchołkami (krawędzi)
 *Pusty string oznacza brak krawędzi, cokolwiek innego jest etykietą krawędzi*
+**Na przekątnej głównej dane są ignorowane. Jednkowoż należy jakąś dummy wartość ('X' wystarczy) wstawić (przynajmniej na ostatni wierzchołek żeby numpy wiedział ile wierszy pobrać**
 
 Np. w A3 będzie informacja o krawędzi między wierzchołkiem 1 i 2.
 
