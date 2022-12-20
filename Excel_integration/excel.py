@@ -62,6 +62,8 @@ def get_formatted_adjacency(G: omg.Graph,labelstr:str):
     matrix = [[ '' for i in range(G.vcount())] for _ in range(G.vcount())]
     for e in G.es:
         matrix[e.source][e.target] = e[labelstr]
+    for i in range(len(matrix)):
+        matrix[i][i] = "X" # dummy variable for main diagonal 
     return matrix
     
 
