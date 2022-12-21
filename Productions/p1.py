@@ -13,3 +13,11 @@ class P1(production.Production):
     @staticmethod
     def specification():
         return "L: A\nR: A->B"
+# a = ig.Graph([(0,1), (0,2), (2,3)])
+# a.vs['label']=['A', 'B', 'A', 'C']
+# print(len(a.vs))
+# p1 = P1()
+# p1.produce(a, [0])
+# print(len(a.vs))
+# print(a.delete_vertices([0]))
+# print(a.get_edgelist())
