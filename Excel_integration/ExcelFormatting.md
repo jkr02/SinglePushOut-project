@@ -9,7 +9,7 @@ Reprezentujemy graf *macierzą sąsiedztwa.*
 W wierszu 1 zapisujemy ekytkiety wierzchołków - czyli czy wierzchołek jest A,B, czy C.
 
 Np. w A1 zapisujemy etykiete wierzchołka 1, w B1 etykiete wierzcholka 2 etc.
-
+*W etykietach wierzchołków kropka '.' jest zakazana. (Usunie Wam kropke i wszystko po kropce)*
 Wiersze 2+ służą do zapisywania relacji miedzy wierzchołkami (krawędzi)
 *Pusty string oznacza brak krawędzi, cokolwiek innego jest etykietą krawędzi*
 **Na przekątnej głównej dane są ignorowane. Jednkowoż należy jakąś dummy wartość ('X' wystarczy) wstawić (przynajmniej na ostatni wierzchołek żeby numpy wiedział ile wierszy pobrać**
