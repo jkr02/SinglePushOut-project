@@ -15,7 +15,7 @@ import pandas as panda
 def pull_from_excel(path : str, sheet: str = "Sheet1", label:str = "Etykieta") -> omg.Graph:
     dataframe: panda.DataFrame = panda.read_excel(path,sheet,header=0,dtype="str").fillna('')#w 0 mamy etykiety dla grafów.
     #Akurat tutaj lista2D jest wygodna do powyciągania tego 
-    verticeNames = dataframe.columns
+    verticeNames = [str(i).split('.')[0] for i in dataframe.columns]
     matrix = dataframe.to_numpy().tolist()
     
     for i in range(len(matrix)): #czyszczenie przekatnej głównej
