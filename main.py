@@ -8,7 +8,7 @@ if __name__ == '__main__':
     g=excel.pull_from_excel("input.xlsx")
     a=[]
     for i in range(len(g.vs["Etykieta"])):
-        a.append(g.vs[i]["Etykieta"]+str(i))
+        a.append(g.vs[i]["Etykieta"]+ " "+ str(i))
     fig,ax=plt.subplots()
     ig.plot(g,
             target=ax,

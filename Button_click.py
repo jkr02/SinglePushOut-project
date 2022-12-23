@@ -28,7 +28,7 @@ class BClick:
     def drawGraph(self):
         a = []
         for i in range(len(self.g.vs["Etykieta"])):
-            a.append(self.g.vs[i]["Etykieta"] + str(i))
+            a.append(self.g.vs[i]["Etykieta"] + " " +str(i))
         fig, ax = plt.subplots()
         ig.plot(self.g,
                 target=ax,
