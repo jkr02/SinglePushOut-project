@@ -10,7 +10,7 @@ import excel
 import igraph as omg
 import matplotlib.pyplot as plt # do pokazywania grafów w konsoli
 
-G = excel.pull_from_excel("Excel_integration\\testfakeexcel.xlsx")
+G = excel.pull_from_excel("testfakeexcel.xlsx")
 
 #Coś rysuje, przekopiowane* z quickstarta to igraph
 fig, ax = plt.subplots(figsize=(5,5))
@@ -32,4 +32,4 @@ omg.plot(
 plt.show() # Pokazuje na ekranie żeby debug można było robić
 
 
-excel.push_to_excel(G,"Excel_integration\\testfakeecelresults.xlsx")
+excel.push_to_excel(G,"Excel_integration\\testfakeexcel.xlsx")

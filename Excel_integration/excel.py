@@ -46,10 +46,10 @@ def push_to_excel(G: omg.Graph, path:str = "tmp.xlsx", label:str = "Etykieta")->
 
 # Funkcje pomocnicze. Możecie spokojnie ignorować.
 # Albo nie. Nie jestem Waszą matką.
-def atoi_Matrix(matrix :list[list[str]]): # zamienia etykiety na numerki.
+def atoi_Matrix(matrix): # zamienia etykiety na numerki.
     return [[ 0 if j=='' else 1 for j in i] for i in matrix]
     
-def applyEdgeLabels(G: omg.Graph, matrix: list[list[str]],labelstr:str):
+def applyEdgeLabels(G: omg.Graph, matrix,labelstr:str):
     labels = ['' for _ in range(G.ecount())]
     for edge_index in range(len(G.es)):
         source = G.es[edge_index].source
