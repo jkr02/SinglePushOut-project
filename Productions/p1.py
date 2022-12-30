@@ -1,5 +1,5 @@
 import igraph as ig
-from Productions import production
+import Productions.production as production
 
 class P1(production.Production):
     @staticmethod
@@ -16,13 +16,14 @@ class P1(production.Production):
     def specification():
         return "L: A\nR: A-d->B"
 # a = ig.Graph([(0,1), (0,2), (2,3)])
-# a.vs['label']=['A', 'B', 'A', 'C']
+# a.vs['Etykieta']=['A', 'B', 'A', 'C']
 # print(len(a.vs))
 # p1 = P1()
 # p1.produce(a, [0])
 # print(len(a.vs))
 # print(a.get_edgelist())
 # print(list(a.vs()))
+# import matplotlib.pyplot as plt
 # fig, ax = plt.subplots(figsize=(5,5))
 # ig.plot(
 #     a,
@@ -32,9 +33,9 @@ class P1(production.Production):
 #     vertex_color="steelblue",
 #     vertex_frame_width=4.0,
 #     vertex_frame_color="white",
-#     vertex_label=a.vs["label"],
+#     vertex_label=a.vs["Etykieta"],
+#     edge_label=a.es["Etykieta"],
 #     vertex_label_size=7.0,
 #     edge_width=2,
 #     edge_color="#7142cf")
-#
 # plt.show()
