@@ -1,7 +1,7 @@
 import igraph as ig
-import Productions.production
+import Productions.production as production
 
-class P2(Productions.production.Production):
+class P2(production.Production):
     @staticmethod
     def produce(g: ig.Graph, array: list): # A-a->(B1 B) -> A-a>(B2 B-b>C)
         if len(array)==3 \
