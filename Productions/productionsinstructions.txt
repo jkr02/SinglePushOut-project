@@ -1,0 +1,1 @@
+Żeby odpalić testy na danej produkcji odkomentuj komentarze pod produkcją i usuń w 2 linijce kodu "Productions." I TYLKO TYLE 
