@@ -5,7 +5,7 @@ import Productions.production as production
 
 class P5(production.Production):
     @staticmethod
-    def produce(g: ig.Graph, array: list): # (A -> B -> C) -> (A -> C) litery mogą być dowolne (zostaje usunięty graf w środku)
+    def produce(g: ig.Graph, array: list): # (A -> B -> C) -> (A -> C) litery mogą być dowolne (zostaje usunięty wierzchołek w środku)
         if len(array) == 3 \
                 and max(array) < g.vcount()\
                 and g.are_connected(array[0], array[1])\
