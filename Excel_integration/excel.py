@@ -36,7 +36,7 @@ def pull_from_excel(path : str, sheet: str = "Sheet1", label:str = "Etykieta") -
 # (A potem szukajcie a znajdziecie)
 # G to graf.
 # label to string jak nazwaliście etykiety. Domyślnie "Etykieta"
-def push_to_excel(G: omg.Graph, path:str = "tmp.xlsx", label:str = "Etykieta")->None:
+def push_to_excel(G: omg.Graph, path:str = "outputGraph.xlsx", label:str = "Etykieta")->None:
    verticeNames = G.vs[label]
    matrix = get_formatted_adjacency(G,label)
    
