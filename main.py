@@ -61,51 +61,53 @@ if __name__ == '__main__':
         'P10': click.pro10
     }
 
-    ax_box = plt.axes([0.15, 0.05, 0.5, 0.07])
+    ax_box = fig.add_axes([0.12, 0.05, 0.3, 0.075])
     textbox = TextBox(ax_box, 'Vertices')
     textbox.on_text_change(click.assignVerticles_to_production)
 
-    ax_but1 = plt.axes([0.5, 0.05, 0.55, 0.07])
-    button1 = Button(ax_but1, 'P1')
+
+    ax_but1 = fig.add_axes([0.4, 0.05, 0.06, 0.075])
+    button1 = Button(ax_but1, 'P1',)
+
     button1.on_clicked(button_click)
 
-    ax_but2 = plt.axes([0.55, 0.05, 0.6, 0.07])
+    ax_but2 = fig.add_axes([0.46, 0.05, 0.06, 0.075])
     button2 = Button(ax_but2, 'P2')
     button2.on_clicked(button_click)
 
-    ax_but3 = plt.axes([0.6, 0.05, 0.65, 0.07])
+    ax_but3 = fig.add_axes([0.52, 0.05, 0.06, 0.075])
     button3 = Button(ax_but3, 'P3')
     button3.on_clicked(button_click)
 
-    ax_but4 = plt.axes([0.65, 0.05, 0.7, 0.07])
+    ax_but4 = fig.add_axes([0.58, 0.05, 0.06, 0.075])
     button4 = Button(ax_but4, 'P4')
     button4.on_clicked(button_click)
 
-    ax_but5 = plt.axes([0.7, 0.05, 0.75, 0.07])
+    ax_but5 = fig.add_axes([0.64, 0.05, 0.06, 0.075])
     button5 = Button(ax_but5, 'P5')
     button5.on_clicked(button_click)
 
-    ax_but6 = plt.axes([0.75, 0.05, 0.8, 0.07])
+    ax_but6 = fig.add_axes([0.70, 0.05, 0.06, 0.075])
     button6 = Button(ax_but6, 'P6')
     button6.on_clicked(button_click)
 
-    ax_but7 = plt.axes([0.8, 0.05, 0.85, 0.07])
+    ax_but7 = fig.add_axes([0.76, 0.05, 0.06, 0.075])
     button7 = Button(ax_but7, 'P7')
     button7.on_clicked(button_click)
 
-    ax_but8 = plt.axes([0.85, 0.05, 0.9, 0.07])
+    ax_but8 = fig.add_axes([0.82, 0.05, 0.06, 0.075])
     button8 = Button(ax_but8, 'P8')
     button8.on_clicked(button_click)
 
-    ax_but9 = plt.axes([0.9, 0.05, 0.95, 0.07])
+    ax_but9 = fig.add_axes([0.88, 0.05, 0.06, 0.075])
     button9 = Button(ax_but9, 'P9')
     button9.on_clicked(button_click)
 
-    ax_but10 = plt.axes([0.95, 0.05, 1, 0.07])
+    ax_but10 = fig.add_axes([0.94, 0.05, 0.06, 0.075])
     button10 = Button(ax_but10, 'P10')
     button10.on_clicked(button_click)
 
-    ax_but11 = plt.axes([0.90, 0.15, 1, 0.07])
+    ax_but11 = fig.add_axes([0, 0.924, 0.15, 0.075])
     button11 = Button(ax_but11, 'Save graph')
     button11.on_clicked(click.pushGraph_to_excel)
 
