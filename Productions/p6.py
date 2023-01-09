@@ -6,12 +6,8 @@ import Productions.production as production
 class P6(production.Production):
     @staticmethod
     def produce(g: ig.Graph, array: list): # (A1 -> A2) -> (C <- A1 -> A2' -> B)
-        if len(array) == 2 \
-                and max(array) < g.vcount()\
-                and g.are_connected(array[0], array[1])\
-                and str(g.vs[array[0]]['Etykieta'])=='A'\
-                and str(g.vs[array[1]]['Etykieta'])=='A':
-
+        if len(array) == 2 and max(array) < g.vcount() and g.are_connected(array[0], array[1])\
+                and str(g.vs[array[0]]['Etykieta'])=='A' and str(g.vs[array[1]]['Etykieta'])=='A':
             g.add_vertices(2)
             g.vs[g.vcount()-2:]['Etykieta']=['C', 'B']   
             g.vs[array[1]]['Etykieta']="A'"
