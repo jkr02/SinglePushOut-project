@@ -1,6 +1,6 @@
 import igraph as ig
 import matplotlib.pyplot as plt
-
+from Excel_integration import excel
 import Productions.p1 as p1
 import Productions.p2 as p2
 import Productions.p3 as p3
@@ -25,53 +25,41 @@ class BClick:
                 self.array.append(int(i))
         except:
             ""
-    def drawGraph(self):
+    def vertexLabel(self):
         a = []
         for i in range(len(self.g.vs["Etykieta"])):
             a.append(self.g.vs[i]["Etykieta"] + " " +str(i))
-        fig, ax = plt.subplots()
-        ig.plot(self.g,
-                target=ax,
-                layout="circle",  # print nodes in a circular layout
-                vertex_size=0.5,
-                vertex_color="steelblue",
-                vertex_frame_width=4.0,
-                vertex_frame_color="white",
-                vertex_label=a,
-                edge_label=self.g.es["Etykieta"],
-                vertex_label_size=10,
-                edge_label_size=7.0,
-                edge_width=2,
-                edge_color="#7142cf"
-                )
-        plt.show()
-    def pro1(self, event):
+        return a
+
+    def pro1(self):
         p1.P1.produce(self.g,self.array)
-        self.drawGraph()
-    def pro2(self, event):
+        return self.vertexLabel()
+    def pro2(self):
         Productions.p2.P2.produce(self.g, self.array)
-        self.drawGraph()
-    def pro3(self, event):
+        return self.vertexLabel()
+    def pro3(self):
         Productions.p3.P3.produce(self.g, self.array)
-        self.drawGraph()
-    def pro4(self, event):
+        return self.vertexLabel()
+    def pro4(self):
         Productions.p4.P4.produce(self.g, self.array)
-        self.drawGraph()
-    def pro5(self, event):
+        return self.vertexLabel()
+    def pro5(self):
         Productions.p5.P5.produce(self.g, self.array)
-        self.drawGraph()
-    def pro6(self, event):
+        return self.vertexLabel()
+    def pro6(self):
         Productions.p6.P6.produce(self.g, self.array)
-        self.drawGraph()
-    def pro7(self, event):
+        return self.vertexLabel()
+    def pro7(self):
         Productions.p7.P7.produce(self.g, self.array)
-        self.drawGraph()
-    def pro8(self, event):
+        return self.vertexLabel()
+    def pro8(self):
         Productions.p8.P8.produce(self.g, self.array)
-        self.drawGraph()
-    def pro9(self, event):
+        return self.vertexLabel()
+    def pro9(self):
         Productions.p9.P9.produce(self.g, self.array)
-        self.drawGraph()
-    def pro10(self, event):
+        return self.vertexLabel()
+    def pro10(self):
         Productions.p10.P10.produce(self.g, self.array)
-        self.drawGraph()
+        return self.vertexLabel()
+    def pushGraph_to_excel(self,event):
+        excel.push_to_excel(self.g)
