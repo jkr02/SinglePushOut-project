@@ -65,7 +65,6 @@ if __name__ == '__main__':
     textbox = TextBox(ax_box, 'Vertices')
     textbox.on_text_change(click.assignVerticles_to_production)
 
-
     ax_but1 = fig.add_axes([0.4, 0.05, 0.06, 0.075])
     button1 = Button(ax_but1, 'P1',)
 

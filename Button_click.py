@@ -20,11 +20,18 @@ class BClick:
     def assignVerticles_to_production(self, text: str):
         a=text.split(" ")
         self.array=[]
-        try:
-            for i in a:
-                self.array.append(int(i))
-        except:
-            ""
+        if len(a) == 2 and not a[1].isdigit():
+            try:
+                self.array.append(int(a[0]))
+                self.array.append(a[1])
+            except:
+                ""
+        else:
+            try:
+                for i in a:
+                    self.array.append(int(i))
+            except:
+                ""
     def vertexLabel(self):
         a = []
         for i in range(len(self.g.vs["Etykieta"])):
