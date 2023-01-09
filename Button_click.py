@@ -32,12 +32,6 @@ class BClick:
                     self.array.append(int(i))
             except:
                 ""
-    def assignLabel_to_production(self, text: str):
-        try:
-            for i in a:
-                self.array.append(int(i))
-        except:
-            ""
     def vertexLabel(self):
         a = []
         for i in range(len(self.g.vs["Etykieta"])):
