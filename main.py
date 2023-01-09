@@ -25,6 +25,9 @@ def button_click(event):
             )
     fig.canvas.draw_idle()
 
+def show_instructions():
+    return
+
 if __name__ == '__main__':
     g = excel.pull_from_excel("input.xlsx")
     a = []
@@ -106,8 +109,12 @@ if __name__ == '__main__':
     button10 = Button(ax_but10, 'P10')
     button10.on_clicked(button_click)
 
-    ax_but11 = fig.add_axes([0, 0.924, 0.15, 0.075])
+    ax_but11 = fig.add_axes([0.01, 0.924, 0.15, 0.075])
     button11 = Button(ax_but11, 'Save graph')
     button11.on_clicked(click.pushGraph_to_excel)
+
+    ax_but12 = fig.add_axes([0.01, 0.825, 0.15, 0.075])
+    button12 = Button(ax_but12, 'Instruction')
+    button12.on_clicked(show_instructions())
 
     plt.show()
