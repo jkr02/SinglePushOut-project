@@ -4,9 +4,8 @@ import Productions.production as production
 class P2(production.Production):
     @staticmethod
     def produce(g: ig.Graph, array: list): # A-a->(B1 B) -> A-a>(B2 B-b>C)
-        if len(array)==3 \
-                and g.vs[array[0],array[1],array[2]]['Etykieta']==['A', 'B', 'B']\
-                and g.vs[g.get_eids([(array[0], array[1]), (array[0], array[2])])]['Etykieta']==['a', 'a']:
+        if len(array)==3 and g.vs[array[0],array[1],array[2]]['Etykieta']==['A', 'B', 'B'] and g.es[g.get_eids([(array[0], array[1]), (array[0], array[2])])]['Etykieta']==['a', 'a']:
+            print('dziala_jako_tako')
             g.add_vertices(2)
             g.vs[g.vcount()-2:]['Etykieta']=['B', 'C']
             g.add_edges([(array[0], g.vcount()-2), (array[2], g.vcount()-1)])
