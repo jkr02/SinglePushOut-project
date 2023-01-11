@@ -13,7 +13,9 @@ class P5(production.Production):
                 # and str(g.vs[array[0]]['Etykieta'])=='A'\
                 # and str(g.vs[array[1]]['Etykieta'])=='B'\
                 # and str(g.vs[array[2]]['Etykieta'])=='C'\
-            g.add_edges([(array[0],array[2])])
+            if not g.are_connected(array[0], array[2]):
+                g.add_edges([(array[0],array[2])])
+                g.es[g.vcount() - 1]['Etykieta'] = 'b'
             g.delete_edges([(array[0], array[1]),(array[1], array[2])])
             g.delete_vertices(array[1])
     @staticmethod

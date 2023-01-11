@@ -10,6 +10,7 @@ class P3(production.Production):
             g.add_vertices(2)
             g.vs[g.vcount()-2:]['Etykieta']=['A', 'C']
             g.add_edges([(array[0], g.vcount()-1), (g.vcount()-2, array[0])])
+            g.es[g.vcount() - 2:]['Etykieta'] = ['a', 'b']
     @staticmethod
     def to_string():
         return "Production 3"

@@ -104,17 +104,17 @@ if __name__ == '__main__':
     ax_but9 = fig.add_axes([0.88, 0.05, 0.06, 0.075])
     button9 = Button(ax_but9, 'P9')
     button9.on_clicked(button_click)
-
-    ax_but10 = fig.add_axes([0.94, 0.05, 0.06, 0.075])
-    button10 = Button(ax_but10, 'P10')
-    button10.on_clicked(button_click)
+    
+    #ax_but10 = fig.add_axes([0.94, 0.05, 0.06, 0.075])
+    #button10 = Button(ax_but10, 'P10')
+    #button10.on_clicked(button_click)
 
     ax_but11 = fig.add_axes([0.01, 0.924, 0.15, 0.075])
     button11 = Button(ax_but11, 'Save graph')
     button11.on_clicked(click.pushGraph_to_excel)
 
-    ax_but12 = fig.add_axes([0.01, 0.825, 0.15, 0.075])
-    button12 = Button(ax_but12, 'Instruction')
-    button12.on_clicked(show_instructions())
+    #ax_but12 = fig.add_axes([0.01, 0.825, 0.15, 0.075])
+    #button12 = Button(ax_but12, 'Instruction')
+    #button12.on_clicked(show_instructions())
 
     plt.show()

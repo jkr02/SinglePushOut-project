@@ -6,7 +6,7 @@ class P7(production.Production):
     def produce(g: ig.Graph, array: list): # (A B) -> (A -> B) -- dowolne dwa wierzchołki są łączone 
         if len(array) == 2 and max(array) < g.vcount() and not g.are_connected(array[0], array[1]):
             g.add_edges([(array[0], array[1])])
-            
+            g.es[g.vcount() - 1]['Etykieta'] = 'a'
     @staticmethod
     def to_string():
         return "Production 7"

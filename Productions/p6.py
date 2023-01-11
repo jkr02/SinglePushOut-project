@@ -12,6 +12,7 @@ class P6(production.Production):
             g.vs[g.vcount()-2:]['Etykieta']=['C', 'B']   
             g.vs[array[1]]['Etykieta']="A'"
             g.add_edges([(array[0], g.vcount()-2), (array[1],g.vcount()-1)])
+            g.es[g.vcount() - 2:]['Etykieta'] = ['b', 'a']
             
     @staticmethod
     def to_string():
