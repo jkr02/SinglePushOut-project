@@ -1,8 +1,6 @@
 import igraph as ig
 import Productions.production as production
 
-# Nie dodałem etykiet krawędzi, jak ustalimy jak chcemy to robić to dodam (tworzy puste krawędzie)
-
 class P5(production.Production):
     @staticmethod
     def produce(g: ig.Graph, array: list): # (A -> B -> C) -> (A -> C) litery mogą być dowolne (zostaje usunięty wierzchołek w środku)
